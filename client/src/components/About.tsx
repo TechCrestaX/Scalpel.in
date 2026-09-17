@@ -6,49 +6,6 @@ import {
   Star,
 } from "lucide-react";
 
-const qualifications = [
-  {
-    icon: GraduationCap,
-    title: "MBBS",
-    institution: "SSKM Hospital, Kolkata",
-  },
-  {
-    icon: Hospital,
-    title: "MS (General Surgery)",
-    institution: "NRS Medical College, Kolkata",
-  },
-  {
-    icon: Medal,
-    title: "MRCS (Edinburgh)",
-    institution: "Royal College of Surgeons of Edinburgh, UK",
-  },
-  {
-    icon: Award,
-    title: "Fellowship in Minimal Access Surgery (FMAS)",
-    institution:
-      "Association of Minimal Access Surgeons of India (AMASI)",
-  },
-];
-
-const statistics = [
-  {
-    value: "10+",
-    label: "Years of Experience",
-  },
-  {
-    value: "1000+",
-    label: "Surgeries Performed",
-  },
-  {
-    value: "2500+",
-    label: "Happy Patients",
-  },
-  {
-    value: "4.9/5",
-    label: "Ratings",
-    rating: true,
-  },
-];
 
 export default function About() {
   return (
