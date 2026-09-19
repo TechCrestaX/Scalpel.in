@@ -22,7 +22,7 @@ export default function About() {
             {/* LEFT IMAGE */}
             <div className="relative min-h-[450px] overflow-hidden bg-[#e6edf1] sm:min-h-[520px] lg:min-h-[620px]">
               <img
-                src="/doctor-about.jpg"
+                src="/doctor-hero.jpg"
                 alt="Dr. Rahul Bhanja Chowdhury"
                 className="absolute inset-0 h-full w-full object-cover object-top"
                 onError={(event) => {
@@ -53,13 +53,7 @@ export default function About() {
             <div className="flex flex-col px-8 py-9 sm:px-10 lg:px-12 lg:py-10">
 
               <div className="mb-6">
-                <div className="mb-2 flex items-center gap-2.5">
-                  <span className="h-[2px] w-10 bg-[#078dcc]" />
-
-                  <span className="text-[9px] font-bold uppercase tracking-[0.28em] text-[#078dcc]">
-                    About Me
-                  </span>
-                </div>
+      
 
                 <h2 className="font-serif text-[32px] font-bold leading-tight tracking-[-0.03em] text-[#123f61] sm:text-[36px]">
                   About Dr. R B Chowdhury

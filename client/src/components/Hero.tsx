@@ -30,62 +30,208 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[560px] overflow-hidden bg-[#092f49] sm:min-h-[620px] lg:min-h-[680px]"
+      className="
+        relative
+        isolate
+        w-full
+        max-w-full
+        overflow-x-hidden
+        overflow-y-hidden
+        bg-[#092f49]
+        min-h-[720px]
+        sm:min-h-[680px]
+        lg:min-h-[680px]
+      "
     >
       {/* =========================================================
           HERO BACKGROUND IMAGE
-          IMPORTANT:
-          Put the OT/surgeon image at:
-          public/doctor-hero.jpg
+
+          Mobile:
+          - Keep face visible
+          - Position image slightly toward right/top
+
+          Desktop:
+          - Wider composition
       ========================================================= */}
 
       <img
-        src="/doctor-hero.jpg"
+        src="/doctor-about.jpg"
         alt="Dr. Rahul Bhanja Chowdhury"
-        className="absolute inset-0 h-full w-full object-cover object-[68%_center]"
+        className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          max-w-full
+          object-cover
+          object-[72%_12%]
+          sm:object-[72%_15%]
+          lg:object-[70%_15%]
+        "
       />
 
       {/* =========================================================
-          DARK BLUE GRADIENT
-          Strong on left, lighter on right
+          DARK BLUE OVERLAY
       ========================================================= */}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#052d48]/95 via-[#073d5d]/78 to-[#073d5d]/20" />
+      <div
+        className="
+          absolute
+          inset-0
+          bg-gradient-to-r
+          from-[#052d48]/95
+          via-[#073d5d]/80
+          to-[#073d5d]/35
+        "
+      />
 
-      {/* Extra left darkness for text readability */}
-      <div className="absolute inset-y-0 left-0 w-[75%] bg-gradient-to-r from-[#042b45]/50 to-transparent" />
+      {/* Mobile extra overlay */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-[#052f49]/20
+          sm:hidden
+        "
+      />
 
-      {/* Bottom subtle fade */}
-      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#052c45]/35 to-transparent" />
+      {/* Extra left darkness */}
+      <div
+        className="
+          absolute
+          inset-y-0
+          left-0
+          w-full
+          sm:w-[75%]
+          bg-gradient-to-r
+          from-[#042b45]/60
+          via-[#042b45]/25
+          to-transparent
+        "
+      />
+
+      {/* Bottom fade */}
+      <div
+        className="
+          absolute
+          inset-x-0
+          bottom-0
+          h-32
+          bg-gradient-to-t
+          from-[#052c45]/60
+          to-transparent
+        "
+      />
 
       {/* =========================================================
           CONTENT
       ========================================================= */}
 
-      <div className="relative z-10 mx-auto flex min-h-[560px] max-w-[1440px] items-center px-6 pb-10 pt-[110px] sm:min-h-[620px] sm:px-10 sm:pt-[120px] lg:min-h-[680px] lg:px-12 xl:px-16">
-        <div className="w-full max-w-[720px]">
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          w-full
+          max-w-[1440px]
+          min-w-0
+          items-center
+          px-5
+          pb-10
+          pt-[105px]
+          sm:min-h-[680px]
+          sm:px-10
+          sm:pb-12
+          sm:pt-[120px]
+          lg:min-h-[680px]
+          lg:px-12
+          xl:px-16
+        "
+      >
+        <div
+          className="
+            w-full
+            min-w-0
+            max-w-[720px]
+          "
+        >
+          {/* =====================================================
+              SPECIALTY LINE
+          ===================================================== */}
 
-          {/* SPECIALTY LINE */}
+          <div
+            className="
+              mb-5
+              flex
+              min-w-0
+              flex-wrap
+              items-center
+              gap-x-2
+              gap-y-1.5
+              sm:mb-4
+              sm:gap-x-3
+            "
+          >
+            <span className="h-[1px] w-7 shrink-0 bg-white/80 sm:w-9" />
 
-          <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="h-[1px] w-7 bg-white/80 sm:w-9" />
-
-            <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/90 sm:text-[11px]">
+            <span
+              className="
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.18em]
+                text-white/90
+                sm:text-[11px]
+                sm:tracking-[0.25em]
+              "
+            >
               General Surgery
             </span>
 
-            <span className="text-white/60">|</span>
+            <span className="shrink-0 text-white/60">
+              |
+            </span>
 
-            <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/90 sm:text-[11px]">
+            <span
+              className="
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.18em]
+                text-white/90
+                sm:text-[11px]
+                sm:tracking-[0.25em]
+              "
+            >
               Minimally Invasive Surgery
             </span>
           </div>
 
           {/* =====================================================
               MAIN HEADING
+
+              Smaller on mobile so NOTHING overflows.
           ===================================================== */}
 
-          <h1 className="max-w-[700px] text-[40px] font-semibold leading-[1.02] tracking-[-0.045em] text-white sm:text-[52px] lg:text-[62px]">
+          <h1
+            className="
+              w-full
+              max-w-[700px]
+              break-words
+              text-[35px]
+              font-semibold
+              leading-[1.06]
+              tracking-[-0.035em]
+              text-white
+
+              sm:text-[52px]
+              sm:leading-[1.02]
+              sm:tracking-[-0.045em]
+
+              lg:text-[62px]
+            "
+          >
             Advanced Surgical Care
             <br />
             for a{" "}
@@ -98,53 +244,132 @@ export default function Hero() {
               DOCTOR NAME
           ===================================================== */}
 
-          <div className="mt-5">
-            <h2 className="text-[22px] font-semibold leading-tight text-white sm:text-[28px]">
+          <div className="mt-6 min-w-0 sm:mt-5">
+            <h2
+              className="
+                break-words
+                text-[21px]
+                font-semibold
+                leading-[1.2]
+                text-white
+
+                sm:text-[28px]
+              "
+            >
               {doctor.name}
             </h2>
 
-            <p className="mt-1 text-[12px] font-medium leading-5 text-white/90 sm:text-[15px]">
-              MBBS, MS (General Surgery), MRCS (Edin.), FMAS (AMASI)
+            <p
+              className="
+                mt-2
+                break-words
+                text-[10px]
+                font-medium
+                leading-5
+                text-white/90
+
+                sm:text-[15px]
+              "
+            >
+              MBBS, MS (General Surgery), MRCS (Edinburgh), FMAS (AMASI)
             </p>
 
-            <p className="text-[12px] leading-5 text-white/75 sm:text-[14px]">
+            <p
+              className="
+                break-words
+                text-[10px]
+                leading-5
+                text-white/75
+
+                sm:text-[14px]
+              "
+            >
               Consultant General &amp; Laparoscopic Surgeon
             </p>
           </div>
 
           {/* =====================================================
-              THREE FEATURES
+              FEATURES
+
+              IMPORTANT:
+              Mobile = vertical cards
+              Desktop = horizontal cards
           ===================================================== */}
 
-          <div className="mt-6 flex max-w-[610px]">
+          <div
+            className="
+              mt-7
+              grid
+              w-full
+              min-w-0
+              grid-cols-1
+              gap-4
+
+              sm:mt-6
+              sm:grid-cols-3
+              sm:gap-0
+            "
+          >
             {heroFeatures.map((feature, index) => {
               const Icon = feature.icon;
 
               return (
                 <div
                   key={feature.title}
-                  className={`flex flex-1 items-center gap-2.5 ${
-                    index !== 0
-                      ? "border-l border-white/30 pl-4 sm:pl-6"
-                      : ""
-                  } ${
-                    index !== heroFeatures.length - 1
-                      ? "pr-4 sm:pr-6"
-                      : ""
-                  }`}
+                  className={`
+                    flex
+                    min-w-0
+                    items-center
+                    gap-3
+
+                    ${
+                      index !== 0
+                        ? "sm:border-l sm:border-white/30 sm:pl-5 lg:pl-6"
+                        : ""
+                    }
+
+                    ${
+                      index !== heroFeatures.length - 1
+                        ? "sm:pr-5 lg:pr-6"
+                        : ""
+                    }
+                  `}
                 >
+                  {/* Icon */}
                   <Icon
                     size={25}
                     strokeWidth={1.35}
-                    className="shrink-0 text-white"
+                    className="
+                      h-6
+                      w-6
+                      shrink-0
+                      text-white
+                    "
                   />
 
-                  <div>
-                    <p className="text-[9px] font-semibold leading-4 text-white sm:text-[11px]">
+                  {/* Text */}
+                  <div className="min-w-0">
+                    <p
+                      className="
+                        break-words
+                        text-[10px]
+                        font-semibold
+                        leading-4
+                        text-white
+                        sm:text-[11px]
+                      "
+                    >
                       {feature.title}
                     </p>
 
-                    <p className="text-[9px] leading-4 text-white/75 sm:text-[11px]">
+                    <p
+                      className="
+                        text-[9px]
+                        leading-4
+                        text-white/75
+                        sm:text-[11px]
+                      "
+                    >
                       {feature.subtitle}
                     </p>
                   </div>
@@ -157,30 +382,105 @@ export default function Hero() {
               BUTTONS
           ===================================================== */}
 
-          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <div
+            className="
+              mt-8
+              flex
+              w-full
+              min-w-0
+              flex-col
+              gap-3
+
+              sm:flex-row
+              sm:gap-3
+            "
+          >
+            {/* Appointment */}
             <a
               href="/book-appointment"
-              className="group inline-flex h-[46px] items-center justify-center gap-2 rounded-lg bg-[#0797dc] px-5 text-[12px] font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#0786c5] sm:h-[48px] sm:px-6 sm:text-[13px]"
-            >
-              <CalendarDays size={16} />
+              className="
+                group
+                inline-flex
+                h-[48px]
+                w-full
+                items-center
+                justify-center
+                gap-2
+                rounded-lg
+                bg-[#aac9d7]
+                px-5
+                text-[12px]
+                font-semibold
+                text-white
+                shadow-lg
+                transition-all
+                duration-300
+                hover:bg-[#0786c5]
 
-              <span>Book an Appointment</span>
+                sm:w-auto
+                sm:px-6
+                sm:text-[13px]
+              "
+            >
+              <CalendarDays
+                size={16}
+                className="shrink-0"
+              />
+
+              <span>
+                Book an Appointment
+              </span>
 
               <ArrowRight
                 size={15}
-                className="transition-transform duration-300 group-hover:translate-x-1"
+                className="
+                  shrink-0
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
               />
             </a>
 
+            {/* Know More */}
             <a
               href="#about"
-              className="group inline-flex h-[46px] items-center justify-center gap-2 rounded-lg border border-white/80 bg-transparent px-6 text-[12px] font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#0b3a58] sm:h-[48px] sm:text-[13px]"
+              className="
+                group
+                inline-flex
+                h-[48px]
+                w-full
+                items-center
+                justify-center
+                gap-2
+                rounded-lg
+                border
+                border-white/80
+                bg-white
+                px-6
+                text-[12px]
+                font-semibold
+                text-[#0b3a58]
+                transition-all
+                duration-300
+                hover:bg-amber-100
+
+                sm:w-auto
+                sm:text-[13px]
+              "
             >
-              <span>Know More</span>
+              <span>
+                Know More
+              </span>
 
               <ArrowRight
                 size={15}
-                className="transition-transform duration-300 group-hover:translate-x-1"
+                className="
+                  shrink-0
+                  transition-transform
+                  duration-300
+                  group-hover:translate-x-1
+                "
               />
             </a>
           </div>
@@ -188,10 +488,20 @@ export default function Hero() {
       </div>
 
       {/* =========================================================
-          QUOTE — RIGHT SIDE
+          QUOTE — DESKTOP ONLY
       ========================================================= */}
 
-      <div className="absolute right-[6%] top-[39%] z-10 hidden w-[230px] lg:block">
+      <div
+        className="
+          absolute
+          right-[6%]
+          top-[39%]
+          z-10
+          hidden
+          w-[230px]
+          lg:block
+        "
+      >
         <p className="font-serif text-[18px] italic leading-8 text-white">
           “Precision in surgery.
           <br />
