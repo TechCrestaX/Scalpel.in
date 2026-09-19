@@ -531,7 +531,7 @@ export default function Footer() {
             </span>
 
             <span className="font-semibold text-white group-hover:text-[#5fc4e8]">
-              TechCrestax
+              TechCrestaX
             </span>
             <span
               className="text-[10px] text-red-400 transition-transform duration-300 group-hover:scale-110"
